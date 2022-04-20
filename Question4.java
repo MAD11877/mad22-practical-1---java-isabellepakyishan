@@ -17,7 +17,18 @@ public class Question4
      * Hint: 2 loops are required. System.out.print(...) to print on single line.
      */
      
-    Scanner in = new Scanner(System.in);
-    
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Enter a random integer: ");
+    int randomInt = scanner.nextInt();
+
+    for (int i = randomInt; i > 0; i--){
+      for (int j = 0; j < i; j++){
+        System.out.print("* ");
+      }
+      System.out.println();
+    }
+
+    scanner.close();
+
   }
 }
