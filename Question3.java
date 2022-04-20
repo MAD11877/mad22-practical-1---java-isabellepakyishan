@@ -10,7 +10,14 @@ public class Question3
      * Hint: in.nextInt() to read integer
      */
      
-    Scanner in = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.print("Enter a random integer: ");
+    int randomInt = scanner.nextInt();
     
+    scanner.close();
+
+    int squaredInt = randomInt*randomInt;
+    System.out.print("The square of the random integer entered is " + squaredInt);
   }
 }
