@@ -26,7 +26,36 @@ public class Question5
      * Hint: Use a loop to get input. Use another 2 loops to find the mode
      */
      
-    Scanner in = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Enter a random number (this will be the number of integers you will be entering next): ");
+    int numberofEntries = scanner.nextInt();
+
+    int[] numbersEntered = new int[numberofEntries];
+
+    for (int i = 0; i < numberofEntries; i++){
+      System.out.print("Enter a number: ");
+      int randomNumber = scanner.nextInt();
+      numbersEntered[i] = randomNumber;
+    }
+
+    int maxCount = 0;
+    int maxValue = 0;
+
+    for (int j= 0; j < numberofEntries; ++j){
+      int count = 0;
+      for (int x = 0; x < numberofEntries; ++x){
+        if (numbersEntered[j] == numbersEntered[x]){
+          ++count;
+        }
+      }
+      if (count > maxCount){
+        maxCount = count;
+        maxValue = numbersEntered[j];
+      }
+    }
     
+    scanner.close();
+
+    System.out.println("The mode of the numbers entered is " + maxValue);
   }
 }
