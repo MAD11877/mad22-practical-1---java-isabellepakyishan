@@ -27,13 +27,11 @@ public class Question5
      */
      
     Scanner scanner = new Scanner(System.in);
-    System.out.print("Enter a random number (this will be the number of integers you will be entering next): ");
     int numberofEntries = scanner.nextInt();
 
     int[] numbersEntered = new int[numberofEntries];
 
     for (int i = 0; i < numberofEntries; i++){
-      System.out.print("Enter a number: ");
       int randomNumber = scanner.nextInt();
       numbersEntered[i] = randomNumber;
     }
@@ -56,6 +54,6 @@ public class Question5
     
     scanner.close();
 
-    System.out.println("The mode of the numbers entered is " + maxValue);
+    System.out.println(maxValue);
   }
 }

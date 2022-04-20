@@ -18,7 +18,6 @@ public class Question4
      */
      
     Scanner scanner = new Scanner(System.in);
-    System.out.print("Enter a random integer: ");
     int randomInt = scanner.nextInt();
 
     for (int i = randomInt; i > 0; i--){
@@ -29,6 +28,5 @@ public class Question4
     }
 
     scanner.close();
-
   }
 }
